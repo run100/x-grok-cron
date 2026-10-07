@@ -209,65 +209,92 @@ Top 5 Watchlist
 持续建立并更新动态的 AI 新词 / Root / 长尾 / 案例站 / SERP / 商业机会数据库，优先捕获类似 Strata Qwen 这种“刚形成、需求开始出现、SERP 尚空、独立站可抢”的 0→1 搜索机会。
 
 
-【重点 Root 深挖补充】
-每轮不能只搜一级类目，成熟大词只作为 Seed，必须继续拆到第二、第三、第四层。
+【站点雷达（每轮必须）】
+不能只给 Root/新闻。每轮并行执行“AI Site Radar”，主动找：X 新提及站、新上线站、热门站、上升站、相似站。
 
-Image/Design：
-product image、food photo、real estate photo、fashion photo、jewelry photo、headshot、avatar、tattoo、comic、manga、webtoon、diagram、infographic、floor plan、blueprint、mockup、sticker、logo、icon、texture、pattern、sprite、game asset；继续组合 editor/generator/enhancer/remover/relight/recolor/vectorizer/3D/CAD/SVG/STL/embroidery。
+来源：
+1. X/Twitter：重点账号、AI founder、独立开发者、模型作者、测评账号近24h/72h帖子、回复、引用中的 Domain/URL。
+2. Product Hunt：当日/7d AI launch。
+3. GitHub：Trending/新 Repo/Stars 上升项目的 Homepage/Demo/Docs。
+4. Hugging Face：Trending Models/Spaces 的 Demo/官网。
+5. Reddit/HN：I built、Show HN、alternative、what tool、how to 帖里的域名。
+6. Google SERP：Top Root 的 competitors/alternatives/similar/best/free/online 结果。
+7. AI 导航：新收录/分类页高频小站。
+8. 热门成熟 AI 站：作为 HOT_SITE/REFERENCE，反查最新 Feature/Template/Use Case/Workflow/Integration/Model Support 页面，从新页面挖 Root；热门本身不等于机会。
 
-Video：
-UGC、faceless、avatar、spokesperson、product/ad/music/podcast/shorts/explainer/cinematic/anime video；继续组合 image-to-video/text-to-video/video-to-video/lip sync/dubbing/translator/camera control/motion control/character consistency/product fidelity。
+状态：
+X_NEW=近72h从X发现
+NEW_LAUNCH=新上线/PH/Show HN/新Repo
+HOT_SITE=成熟站近期有新功能/新页面/高讨论
+RISING_SITE=讨论/排名/引用/流量上升
+SIMILAR_SITE=竞品/alternatives扩展
+FOUNDER_SITE=独立开发者新站
+REFERENCE=研究种子
+DEAD=404/停放/无产品，排除
 
-Audio/Music：
-voice clone/changer、TTS、speech-to-text、audio translator、noise/vocal remover、stem splitter、mastering、song extender、audio-to-MIDI、drums-to-MIDI、guitar-to-tabs、song-to-sheet-music。
+【站点数量与扩展】
+每轮目标30–100个有效域名；不足不凑数。优先至少10个来自近72h X/PH/GitHub/HF/Reddit/HN。
+每个 Top Root 尽量找3–10个相关站。
+高价值站继续找 competitors / alternatives / similar tools / 同类PH / SERP同页小站 / Reddit推荐。
+按host去重：www、协议归一；历史旧站如出现新功能/新Root/明显增长可重报为 RISING/HOT。
+有效站点必须能访问或有明确产品证据、定位清晰；停放域名、404、垃圾采集站排除。
 
-3D/CAD：
-photo/image/sketch/PDF/scan → 3D/CAD/DXF/STEP/STL/OBJ/GLB/USDZ/G-code；floor plan → 3D/estimate/material list；image → embroidery/sewing pattern/manufacturing file。优先“现实输入 → 可交付/可制造文件”。
+【P0站点表（必须）】
+Root候选表之外新增：
+🔴 P0 新站 / 上升站 / 值得分析
 
-Professional Workflow：
-Construction：takeoff、estimate、roof measurement、jobsite photo→progress report。
-Insurance：photo→claim、photos→claim packet、photo→estimate、document reconciliation。
-Freight/Customs：BOL/AWB/packing list、freight audit、HS/HTS code、BOL+photos→claim。
-Packaging/Compliance：nutrition label、INCI、supplement label、artwork checker、SDS/GHS、dangerous goods。
-Fashion/Jewelry：tech pack、size chart、sewing pattern、embroidery、sketch/photo→jewelry CAD。
-Documents：invoice/receipt/contract/BOM/SDS/claim/inspection report 的 parser/extractor/checker/reconciler。
+字段：
+域名｜状态｜分类｜首次发现｜来源/证据｜为什么重要｜对应Root｜长尾示例｜DR｜流量｜Pricing｜可访问
 
-【异常信号优先】
-特别寻找：
-1. 新模型发布 1–3 天内某平台开始支持。
-2. 两个成熟 Entity 首次形成固定组合。
-3. 多个独立开发者 7 天内做出同类小工具。
-4. Reddit/X 重复出现 how to / support / vs / local / API 等问题。
-5. Google 已有结果，但尚无权威专题页或专门工具。
+优先：X_NEW、NEW_LAUNCH、RISING_SITE、低DR已有流量、Exact/Partial Match、验证新Root的独立站。
+DR/流量无可靠数据写“未验证”，禁止猜。
 
-【需求验证】
-Top 候选尽量回答：
-谁会搜？找工具、下载、教程、API、价格还是替代品？
-最佳页面类型是什么？
-用户是否可能付费？
-能否用免费工具获客，再通过订阅/API/广告/联盟/Lead 商业化？
-能否做模板页、use-case 页、行业页形成 pSEO？
-官方若已有页面，独立站的差异化入口是什么？
+【全部站点分类汇总（必须）】
+不只列Top 2–3，像站点库一样输出：
+AI视频生成（N）：domain DRxx · domain DR?
+AI视频编辑（N）：...
+AI图片/设计（N）：...
+AI音乐/语音（N）：...
+AI Agent/Coding（N）：...
+AI 3D/CAD（N）：...
+AI Ecommerce（N）：...
+AI SEO/GEO（N）：...
+AI Documents（N）：...
+Professional Workflow（N）：...
+其它（N）：...
+每个域名尽量带DR + Root/一句重要性说明。
 
-【长尾规则】
-通过验证的 Root 给 5–15 个有逻辑的长尾，优先：
-[Root] + free/online/local/open source/API
-[Root] + Mac/Windows/ComfyUI/Ollama/MCP
-[Root] + tutorial/setup/prompts/workflow
-[Root] + alternative/vs/pricing/review
-[Root] + profession/industry/use case
-[model] + capability/platform/workflow
+【Root ↔ Site 双向发现】
+必须同时执行：
+新 Root → 找站
+新站 → 读 Title/H1/Meta/URL/导航/Feature/Use Cases/Pricing/Templates/Docs → 反推 Root/长尾。
 
-【案例站强信号】
-优先标记：
-新上线；DR 低但已有流量；单一功能切入；公开 Pricing/用户量/处理量；多个同类新站同时出现；Title/H1 明确押注同一 Root。
+多个独立小站7d内同时下注同一小Root：标 FOUNDER SIGNAL，提高 Demand/Final Score。
+低DR新站已有自然流量：强验证。
+只有新闻、没有真实产品/重复用户问题：降分。
 
-【执行纪律】
-每轮顺序：
-新事件雷达 → Root 扩展 → 真实信号 → SERP → 案例站 → 评分。
-不要先生成几百词再找证据。
-高潜词继续追到：来源 → Root → 长尾 → SERP → 案例 → DR/流量 → 页面类型 → 商业模式。
-无法验证的数据明确写“未验证”，不要猜 DR、流量、发布时间或搜索量。
+【热门站反查】
+每轮抽查成熟热门AI站最近新增页面，重点找：新功能/模板/use case、新押注长尾、Model×Platform、Function×Industry、Input→Output；若需求已被大站验证但SERP仍有小站切口，也保留。
 
-【持续学习】
-保存首次发现、首次证据、状态变化和最新证据。对 Top Opportunity 后续观察竞争者、流量、SERP 难度和 WATCH→RISING→BREAKOUT 变化，也记录最终被证明“没有需求”的词，用成功/失败样本持续修正 Final Opportunity Score。
+【长尾与需求验证】
+通过验证的Root给5–15个有逻辑长尾：
+Root + free/online/local/open source/API
+Root + Mac/Windows/ComfyUI/Ollama/MCP
+Root + tutorial/setup/prompts/workflow
+Root + alternatives/vs/pricing/review
+Root + profession/industry/use case
+model + capability/platform/workflow
+
+Top候选要回答：谁会搜、找什么、最佳页面类型、是否可能付费、能否免费工具获客+订阅/API/广告/联盟/Lead、能否pSEO、官方已有页面时独立站如何差异化。
+
+【执行顺序】
+新事件/新站雷达 → Root提取 → Site扩展 → 真实信号 → SERP → 案例站 → DR/流量 → 长尾 → 评分。
+不要先生成几百组合再找证据。高潜词追到：来源→Root→长尾→SERP→案例→页面类型→商业模式。无法验证写“未验证”。
+
+【持久化与学习】
+如GitHub有写权限，新增站点/Root写入：
+x-grok-ai-keyword/data/sites.csv
+x-grok-ai-keyword/data/roots.csv
+x-grok-ai-keyword/runs/YYYY-MM-DD-HH.md
+保存first_seen、last_seen、source、status，不覆盖历史。
+持续观察Top Opportunity的竞争者、流量、SERP难度、WATCH→RISING→BREAKOUT，也记录“没有需求”的失败样本，用反馈修正Final Opportunity Score。
