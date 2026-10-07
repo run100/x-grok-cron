@@ -1092,3 +1092,153 @@ domain, url, category, status, root, keywords, first_seen, last_seen, source, so
 - 更新 last_seen / status / 新证据
 - 保存首次发现时间
 - 无法验证的数据留空或写 unverified
+
+
+---
+
+## 47. 大模型厂家热点层（每轮必须执行，不能被机会筛选过滤）
+
+这是独立于“建站机会”的强制 Hotspot Layer。
+
+原则：
+- 热点 ≠ 建站机会。
+- 即使某条新闻不适合建站，也不能因为 Final Opportunity Score 低而从热点层消失。
+- 每轮先完整记录大模型厂家和 AI 基础设施厂商的重大动态，再从其中筛选能形成 Root/长尾/站点机会的部分。
+- “没有机会”只能影响 Top Opportunity，不能影响 Hotspot 表。
+
+### 47.1 每轮强制检查的大模型/平台厂家
+
+至少覆盖以下厂商/生态；若近 24h 无重大更新，则回看 72h / 7d，并在表中标记“无显著更新”，不能整类缺失：
+
+美国/全球：
+- OpenAI / ChatGPT / Codex
+- Anthropic / Claude / Claude Code
+- Google / Gemini / Google DeepMind
+- Meta / Llama / Meta AI
+- xAI / Grok
+- Microsoft / Copilot / Azure AI
+- NVIDIA / NIM / NeMo / Nemotron
+- Amazon / AWS / Bedrock / Nova
+- Apple / Apple Intelligence
+- Mistral AI
+- Cohere
+- Stability AI
+- Black Forest Labs / FLUX
+- Runway
+- Midjourney
+- ElevenLabs
+- Perplexity
+- Hugging Face
+- Replicate
+- fal.ai
+- OpenRouter
+- Ollama
+- LM Studio
+- ComfyUI
+
+中国/亚洲重点：
+- DeepSeek
+- Alibaba / Qwen / Wan
+- ByteDance / Seed / Doubao
+- Moonshot / Kimi
+- Zhipu / GLM
+- MiniMax
+- Tencent / Hunyuan
+- Baidu / ERNIE
+- Kuaishou / Kling
+- SenseTime
+- StepFun / 阶跃星辰
+- Baichuan（如有新动态）
+
+可根据市场新增厂家，但不能因为“今天没有建站词”就不检查上述主要来源。
+
+### 47.2 热点类型
+
+强制抓：
+- 新模型 / 新版本 / preview
+- API 正式开放 / 价格变化
+- 权重发布 / 开源 / License 变化
+- context window / reasoning / multimodal / image / video / audio / coding 能力变化
+- Agents / MCP / Computer Use / Browser Use / Claude Code / Codex 等 Agent 能力
+- ComfyUI / Ollama / OpenRouter / HF / fal / Replicate 首日支持
+- Benchmark / 技术报告 / Model Card
+- 重大合作 / 收购 / 平台集成
+- 免费额度 / 价格下降 / 限额变化
+- 新 App / Desktop / Mobile / Workspace 集成
+- 开发者工具 / SDK / CLI
+- 安全策略 / 权重许可 / 商用许可变化
+- 社区突然爆发的新教程、新用法、新组合词
+
+### 47.3 热点信号来源
+
+每条尽量交叉：
+- 官方 Blog / Docs / Changelog / Model Card / GitHub
+- X 官方账号 / 创始人 / 研究员
+- Hacker News
+- Product Hunt
+- Hugging Face
+- GitHub
+- Reddit
+- The Verge / TechCrunch / VentureBeat / CNBC / Bloomberg / Reuters 等
+- Google Trends / SERP（只作为需求信号，不强制有趋势才算热点）
+
+### 47.4 热点输出表（必须）
+
+每轮在 Root/Opportunity 之前先输出：
+
+## 🔥 大模型厂家 / AI 平台热点
+
+| 厂家 | 热点/事件 | 状态 | 时间 | 原始来源 | 二次信号 | 热度 | 是否形成新 Root | 对应 Root/组合词 | 备注 |
+|---|---|---|---|---|---|---|---|---|---|
+
+状态：
+- NEW_RELEASE
+- API_LAUNCH
+- OPEN_WEIGHTS
+- PRICE_CHANGE
+- INTEGRATION
+- RISING
+- WATCH
+- NO_MAJOR_UPDATE
+
+热点表要求：
+- 重大事件全收，不因“不能建站”而删除。
+- 新闻型可保留，但与“建站机会”分开。
+- 同一厂商多条重大事件可列多行。
+- 如果某主流厂商近 24h 没有更新，允许写 NO_MAJOR_UPDATE；如果 72h/7d 有重要更新，可写“持续发酵”。
+
+### 47.5 热点 → Root 转换
+
+热点表完成后再判断：
+- Brand × Model
+- Model × Platform
+- Model × Feature
+- Model × Use Case
+- Model × Local / Ollama / ComfyUI / OpenRouter / API
+- Model × profession / industry
+- Existing Entity × Existing Entity
+
+只有通过真实需求验证的，才进入 Top Opportunity。
+
+示例：
+“Mistral Large 4 发布”必须保留在热点层；
+是否进入 Top Opportunity，则看：
+mistral large 4 weights / ollama / benchmark / local / manufacturing / cyber 等是否形成实际搜索需求。
+
+“OpenAI Decisions API 发布”必须保留在热点层；
+若出现多站点、重复开发者问题、独立工具或 SERP 空缺，再升级为 Root 机会。
+
+### 47.6 输出顺序（强制）
+
+每轮输出顺序改为：
+
+A. 🔥 大模型厂家 / AI 平台热点（不能被过滤）
+B. 🔴 P0 新站 / 上升站 / X 新提及站
+C. 新词 / Root 候选表
+D. Top Opportunities（可以只有 0–3 个，绝不凑数）
+E. 全部站点分类池
+F. Top 3 必抢（不足 3 个就明确不足）
+G. Top 5 Watchlist
+H. 本轮统计
+
+热点层与机会层必须分开，避免“为了不凑 Top Opportunity”把真正重要的 AI 大事件一起删掉。
