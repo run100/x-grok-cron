@@ -1339,3 +1339,71 @@ H. 本轮统计
 6. SIMILAR_SITE：由竞品/alternatives扩展
 
 站点是否值得建站研究，在收集后再判断；不要因为“暂时不是 Top Opportunity”把站点丢掉。
+
+
+---
+
+## 49. P0 站点必须是“产品主域名”，证据源禁止混入
+
+站点池/P0 的目标是发现真实产品网站，不是收集文章来源或平台页。
+
+### 49.1 可进入 P0 / SITE_POOL
+优先只收：
+- 独立产品主域名，如 example.com / example.ai / example.app
+- 可直接使用的 Web App / Tool / SaaS / Generator / Calculator / Game / Viral Utility
+- 新上线或最近在 X 上突然传播的独立站
+- Founder 自己的产品站
+- 非 AI 也可以，只要是新站、工具站、病毒传播站或值得研究的独立产品
+
+### 49.2 只能作为 EVIDENCE_SOURCE，禁止当产品站
+以下默认不能进入 P0 / SITE_POOL：
+- blog.cloudflare.com、官方博客、docs.*、support.*、developer docs
+- producthunt.com/products/*
+- github.com repo
+- x.com / twitter.com
+- reddit.com
+- Hacker News
+- Medium / Substack
+- 新闻媒体
+- AI Directory / 导航站
+- 厂商 changelog / model card / release note
+
+它们只能放到 source_url / evidence，不算“发现一个站”。
+
+若 Product Hunt / GitHub / Blog 页面指向外部产品，必须继续追到最终独立产品主域名，再把那个域名放入 P0。
+
+### 49.3 X 最新站点优先
+
+Site Radar 不限 AI。AI 仍高优先，但必须同时发现 X 上新出现的非 AI Web 产品。
+
+重点搜索：
+- founder launch / build in public
+- viral website / viral tool
+- "I built" / "I made" / "just launched"
+- "try this" / "made this website" / "use this site"
+- "new website" / "new tool" / "side project"
+- #buildinpublic / #indiehackers / #microsaas / #indiedev
+- 用户突然大量分享同一域名或分享其生成结果
+
+特别关注：
+- poster maker / profile card / shareable image
+- quiz / calculator / generator
+- music / movie / game / book collection tool
+- meme / social sharing utility
+- visualization / tracker / ranking / database
+- one-purpose micro tools
+
+### 49.4 X_BREAKOUT_SITE
+
+如果一个此前少见的独立域名在 24–72h 内被多个 X 用户独立分享，或用户大量分享该站生成结果，标记：
+X_BREAKOUT_SITE
+
+这类站即使不是 AI，也应进入 P0。
+
+示例判断方式：
+- Founder 首发 + 多个用户转发/分享结果
+- 多个不相关账号独立贴同一域名
+- hashtag / challenge / generated result 开始扩散
+- Reddit/HN 同期出现作为第二信号
+
+例如 my9albums 这类“可生成并分享结果”的新站，应被 Site Radar 捕获；重点提取最终产品域名，而不是承载其新闻/介绍的博客或平台域名。
