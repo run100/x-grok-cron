@@ -1,228 +1,98 @@
 执行「AI 新词 / 新搜索需求雷达」。
 
 第一步（必须）：
-使用已连接的 GitHub Connector 读取并遵循完整规则：
+使用已连接的 GitHub Connector 读取最新版完整规则：
 https://github.com/run100/x-grok-cron/blob/main/x-grok-ai-keyword/AI-KEYWORD-RADAR.md
+Full Spec 优先于本提示词；若暂时无法读取 GitHub，仍按本提示词执行，不中止。
 
-该文件是本任务的唯一长期 Full Spec。每次执行先读取最新版，不要只依赖本提示词。如果 Full Spec 更新，以 GitHub 最新内容为准。
-
-如果暂时无法读取 GitHub，仍按下面核心规则执行，不要中止。
+【核心原则】
+热点 ≠ 建站机会。不能为了“不凑 Top Opportunity”把重要 AI 热点删掉。
+每轮必须先完整记录“大模型厂家/AI平台热点”，再做站点雷达，再筛 Root/建站机会。
+Top Opportunity 可以只有 0–3 个；热点层和站点层不能因此缩水。
 
 【核心 KPI】
-不要把“发现 AI 新闻数量”当成功指标。真正目标是尽可能早发现“过去几乎不存在、现在开始形成真实搜索需求”的新 Root / 新组合词 / 新工作流 / 新站点机会。
+尽可能早发现“过去几乎不存在、最近开始形成真实搜索需求”的：
+新 AI 产品/模型/品牌；新模型×平台/功能/场景；新功能/玩法/工作流；职业 AI 工作流；新 Root/长尾；新站/上升站；Existing Entity×Existing Entity 异常组合；可做 Tool/Generator/Checker/Calculator/Directory/Database/Tutorial/Comparison/Template/API/pSEO 的机会。
 
-重点发现：
-1. 新 AI 产品、模型、品牌
-2. 新模型 + 已有产品/平台形成的新组合词
-3. 新功能、新玩法、新工作流
-4. 新职业 AI 工作流
-5. 突然被多人讨论的新 AI 概念
-6. 过去 30–90 天几乎不存在、最近 24–72h 开始出现的新词
-7. 可以做 Tool / Generator / Checker / Calculator / Directory / Database / Tutorial / Comparison / Template / API / pSEO 的词
-8. 新站点反向暴露出来的新 Root
+时间：优先24h；同时回看72h、7d、30d，必要时90d判断以前是否几乎不存在。
 
-【时间】
-优先过去 24h，同时回看 72h、7d、30d，必要时 90d，判断是否真正从 0 开始起量。
+【A. 🔥 大模型厂家/AI平台热点：每轮强制】
+每轮必须检查，不能因“无建站机会”而省略：
+OpenAI/ChatGPT/Codex；
+Anthropic/Claude/Claude Code；
+Google/Gemini/DeepMind；
+Meta/Llama；
+xAI/Grok；
+Microsoft/Copilot/Azure AI；
+NVIDIA/NIM/NeMo/Nemotron；
+Amazon/AWS/Bedrock/Nova；
+Apple/Apple Intelligence；
+Mistral；
+Cohere；
+DeepSeek；
+Alibaba/Qwen/Wan；
+ByteDance/Seed/Doubao；
+Moonshot/Kimi；
+Zhipu/GLM；
+MiniMax；
+Tencent/Hunyuan；
+Baidu/ERNIE；
+Kuaishou/Kling；
+SenseTime；
+StepFun；
+Stability AI；
+Black Forest Labs/FLUX；
+Runway；
+Midjourney；
+ElevenLabs；
+Perplexity；
+Hugging Face；
+Replicate；
+fal.ai；
+OpenRouter；
+Ollama；
+LM Studio；
+ComfyUI。
+可新增重要厂家，但上述主流来源不能因为当天机会少而整类消失。
 
-【信息源】
-优先 X/Twitter：
-@_akhaliq、Hugging Face、OpenAI、Google/DeepMind、Anthropic、Meta AI、xAI、DeepSeek、Qwen/Alibaba、Microsoft AI、NVIDIA AI、Stability AI、Black Forest Labs、Runway、Midjourney、ElevenLabs、Replicate、fal.ai、Cursor、Ollama、LM Studio、ComfyUI 等。
+若24h无重大更新，回看72h/7d；可标 NO_MAJOR_UPDATE 或“持续发酵”。
 
-同时检查：
-Hugging Face Trending、GitHub Trending/新 Repo、Product Hunt、Hacker News、Reddit（LocalLLaMA/StableDiffusion/MachineLearning/SaaS/SideProject/SEO 等）、官方 Blog/Release Notes/Model Cards、AI 导航新收录、新上线小站、新域名、教程。
+热点必须抓：
+新模型/preview；API上线；开放权重/License；价格/免费额度/限额变化；context/reasoning/multimodal/image/video/audio/coding能力变化；Agents/MCP/Computer Use/Browser Use；ComfyUI/Ollama/OpenRouter/HF/fal/Replicate首日支持；Benchmark/技术报告；重大合作/收购/集成；新App/CLI/SDK/Workspace；商用许可/安全策略；社区突然爆发的新玩法/教程/组合词。
 
-不要只盯大厂。个人开发者、小团队和刚上线的小站优先。
+热点来源：
+官方Blog/Docs/Changelog/Model Card/GitHub；官方X/创始人/研究员；HN；PH；HF；GitHub；Reddit；主流科技媒体。重要事件尽量2个信号。
 
-【最重要的新词类型】
-A 新品牌
-B 品牌 + 模型
-C 模型 + 功能
-D 产品 + 使用场景
-E Existing Entity × Existing Entity 的异常新组合
-F 职业工作流 / X→Y
+热点输出表必须先于机会表：
+厂家｜热点/事件｜状态｜时间｜原始来源｜二次信号｜热度｜是否形成新Root｜Root/组合词｜备注
+状态：NEW_RELEASE/API_LAUNCH/OPEN_WEIGHTS/PRICE_CHANGE/INTEGRATION/RISING/WATCH/NO_MAJOR_UPDATE。
+重大新闻即使不能建站也要保留。
 
-例如：
-Strata Qwen
-Claude MCP
-ComfyUI + 新模型
-Ollama + 新模型
-photo to CAD
-video to SOP
-audio to MIDI
-photos to claim packet
-supplier PDF to compliant label
+【热点→Root】
+完成热点表后再扩：
+Brand×Model
+Model×Platform
+Model×Feature
+Model×Use Case
+Model×local/Ollama/ComfyUI/OpenRouter/API
+Model×profession/industry
+Existing Entity×Existing Entity
+只有通过真实需求验证的才进入 Top Opportunity。
 
-如果两个旧词过去 30–90d 几乎没组合使用，但最近 24–72h 突然在多个来源出现，标记 COMBINATION BREAKOUT。
+【B. AI Site Radar：每轮强制】
+不能只给 Root/新闻。每轮主动找：X新提及站、新上线站、热门站、上升站、相似站。
 
-【AI Root 必须全行业覆盖】
-不要只追 AI 新闻。每轮主动在以下 Root Tree 中寻找新变化：
-
-AI Image/Photo/Design：
-image/photo/product photo/design/logo/icon/avatar/headshot/infographic/diagram/floor plan/tattoo/comic/manga/webtoon + generator/editor/enhancer/remover/vectorizer/inpainting/outpainting/image-to-video/image-to-3D/image-to-CAD 等。
-
-AI Video：
-video/UGC/avatar/faceless/product video/music video + text-to-video/image-to-video/video-to-video/lip sync/dubbing/translator/editor/motion control/character consistency/product consistency 等。新视频模型出现后自动扩 [model] + image to video / lip sync / UGC / product video / avatar / anime / API / prompt。
-
-AI Audio/Music/Voice：
-music/song/voice/audio/podcast + generator/clone/changer/translator/stem splitter/audio-to-MIDI/song-to-sheet-music/video-to-tabs 等。
-
-AI 3D/CAD/Manufacturing：
-image/photo/sketch/PDF → 3D/CAD/DXF/STEP/STL/G-code/floor plan/measurement，重点关注“现实输入 → 可生产文件”。
-
-AI Agent/Coding/MCP：
-agent/coding agent/browser agent/voice agent + builder/orchestration/memory/eval/security/monitor；MCP server/client/registry/validator/security/scanner；新模型 × Ollama/LM Studio/ComfyUI/Cursor/Claude Code 等。
-
-AI Ecommerce：
-product photo/listing/catalog/UGC/virtual try-on/Amazon A+/Shopify/Etsy/TikTok Shop/product fidelity。
-
-AI SEO/GEO：
-keyword/SERP/content/AI visibility/LLM visibility/citation tracker/ChatGPT ranking/Perplexity SEO/GEO/AEO。
-
-AI Documents：
-PDF/OCR/Excel/CSV/invoice/receipt/BOL/AWB/SDS/BOM/contract/claim/inspection report + parser/extractor/checker/reconciliation/report。
-
-职业/行业：
-Legal、Finance、HR、Education、Gaming、Construction、Real Estate、Insurance、Logistics、Customs、Manufacturing、Fashion、Jewelry、Packaging、Compliance、Chemical/SDS、Research、Cybersecurity、Health Admin/Dental 等。
-
-完整 Root 母库和扩词规则以 GitHub Full Spec 为准。
-
-【通用组合矩阵】
-每轮都从这些维度碰撞，但禁止机械生成垃圾词：
-
-AI Capability
-× Input Object
-× Output
-× Function
-× Industry
-× Profession
-× Platform
-× Model
-× Workflow
-× Search Intent
-
-重点找：
-Object × Function
-Model × Platform
-Model × Use Case
-Profession × Deliverable
-X → Y
-Existing Entity × Existing Entity
-
-每轮至少主动探索 20 个新的 X→Y 工作流，但只有出现真实信号才能成为候选。
-
-【新模型扩词】
-任何新模型不允许只记录模型名。
-继续检查：
-download / github / hugging face / API / pricing / benchmark / demo / free
-local / Mac / Windows / Linux / Ollama / LM Studio / ComfyUI / WebUI
-image / video / coding / agent / OCR / 3D / voice
-以及真实任务：product photo / manga / infographic / UGC / product video / lip sync / avatar / character consistency 等。
-
-【真实信号门槛】
-禁止“新模型 × 1000 Root”后全部当机会。
-
-至少出现一种真实信号才能进入候选：
-X/Reddit 真实讨论
-Google 新 SERP
-GitHub Repo
-Hugging Face 项目
-新网站/新域名
-真实产品功能
-真实职业工作流
-用户问题
-开发者下注
-付费/Pricing
-真实使用案例
-
-只有语义上成立但无信号：标记 IDEA，不能进 Top Opportunity。
-
-重要候选尽量要 2 个独立信号。
-
-【新站反推】
-必须同时做：
-新词 → 找网站
-新网站 → 反推 Root
-
-发现新站后检查 Title/H1/Meta/URL/导航/功能页/Use Cases/Pricing/Templates/Docs。
-多个新站同时下注同一个小 Root：标记 FOUNDER SIGNAL。
-
-【SERP】
-重要 Root 必须检查 Google SERP：
-Top10 是否首页/内页、小站、新站、Exact/Partial Match、大品牌垄断程度、论坛/GitHub 占比、是否已有专门工具、是否适合独立站/pSEO。
-
-优先：小站能进、内页多、大牌未完全覆盖、搜索意图明确、工具化强。
-
-【状态】
-NEW = 首次发现
-RISING = 已发现但明显增长
-BREAKOUT = 明显爆发
-COMBINATION BREAKOUT = 两个旧词的新组合爆发
-FOUNDER SIGNAL = 多个开发者/新站同时下注
-WATCH = 证据不足待追踪
-IDEA = 无真实需求证据
-
-【去重】
-不要重复发旧词。只有趋势上涨、新站、新案例、新域名、SERP 改变、官方发布、新功能、新长尾或 BREAKOUT 才重新报告。
-
-【评分】
-尽量给：
-Novelty Score
-Demand Score
-SERP Score
-Commercial Score
-Toolability Score
-Independent Site Score
-Final Opportunity Score /100
-
-区分“很新但没人要”和“很新且正在形成需求”。
-
-【输出】
-先给候选表格：
-新词/Root｜状态｜分类｜是什么｜首次发现｜证据｜24h/72h/7d信号｜30/90d历史｜Google/SERP｜案例站｜DR/流量（能验证则给）｜搜索意图｜建站类型｜推荐长尾｜Final Score
-
-然后给 Top 10 Opportunities，每个写：
-为什么突然出现
-需求来源
-过去是否几乎没人搜
-24–72h 变化
-当前 SERP
-案例站
-可做什么站
-建议 Root/长尾
-商业化
-风险
-评分
-
-最后：
-Top 3 必抢
-Top 5 Watchlist
-
-以及统计：
-新产品、新模型、新 Root、新组合词、COMBINATION BREAKOUT、FOUNDER SIGNAL、BREAKOUT、值得建站数量。
-
-如果没有真正达标的新词，不要凑数。
-明确写：
-“本轮未发现达到建站标准的新词。”
-但仍输出 Watchlist。
-
-最终目标：
-持续建立并更新动态的 AI 新词 / Root / 长尾 / 案例站 / SERP / 商业机会数据库，优先捕获类似 Strata Qwen 这种“刚形成、需求开始出现、SERP 尚空、独立站可抢”的 0→1 搜索机会。
-
-
-【站点雷达（每轮必须）】
-不能只给 Root/新闻。每轮并行执行“AI Site Radar”，主动找：X 新提及站、新上线站、热门站、上升站、相似站。
-
-来源：
-1. X/Twitter：重点账号、AI founder、独立开发者、模型作者、测评账号近24h/72h帖子、回复、引用中的 Domain/URL。
+站点来源：
+1. X/Twitter：AI founder、独立开发者、模型作者、测评账号近24/72h帖子、回复、引用里的实际Domain/URL。
 2. Product Hunt：当日/7d AI launch。
-3. GitHub：Trending/新 Repo/Stars 上升项目的 Homepage/Demo/Docs。
-4. Hugging Face：Trending Models/Spaces 的 Demo/官网。
-5. Reddit/HN：I built、Show HN、alternative、what tool、how to 帖里的域名。
-6. Google SERP：Top Root 的 competitors/alternatives/similar/best/free/online 结果。
-7. AI 导航：新收录/分类页高频小站。
-8. 热门成熟 AI 站：作为 HOT_SITE/REFERENCE，反查最新 Feature/Template/Use Case/Workflow/Integration/Model Support 页面，从新页面挖 Root；热门本身不等于机会。
+3. GitHub：Trending/新Repo/Stars上升项目的Homepage/Demo/Docs。
+4. Hugging Face：Trending Models/Spaces 的Demo/官网。
+5. Reddit/HN：I built、Show HN、alternative、what tool、how to帖子里的域名。
+6. Google SERP：Top Root 的competitors/alternatives/similar/best/free/online/use-case。
+7. AI导航/目录：新收录和分类页高频小站。
+8. 热门成熟AI站：作为 HOT_SITE/REFERENCE，反查最近新增 Feature/Template/Use Case/Workflow/Integration/Model Support 页面，从新页面挖 Root；热门本身不等于机会。
 
-状态：
+站点状态：
 X_NEW=近72h从X发现
 NEW_LAUNCH=新上线/PH/Show HN/新Repo
 HOT_SITE=成熟站近期有新功能/新页面/高讨论
@@ -232,51 +102,80 @@ FOUNDER_SITE=独立开发者新站
 REFERENCE=研究种子
 DEAD=404/停放/无产品，排除
 
-【站点数量与扩展】
 每轮目标30–100个有效域名；不足不凑数。优先至少10个来自近72h X/PH/GitHub/HF/Reddit/HN。
-每个 Top Root 尽量找3–10个相关站。
-高价值站继续找 competitors / alternatives / similar tools / 同类PH / SERP同页小站 / Reddit推荐。
-按host去重：www、协议归一；历史旧站如出现新功能/新Root/明显增长可重报为 RISING/HOT。
-有效站点必须能访问或有明确产品证据、定位清晰；停放域名、404、垃圾采集站排除。
+每个 Top Root 尽量找3–10个相关站；高价值站继续找 competitors/alternatives/similar tools/同类PH/SERP同页小站/Reddit推荐。
+按host去重：www和协议归一；旧站出现新功能/新Root/明显增长可重报为RISING/HOT。
+停放、404、明显垃圾采集、不可访问且无产品证据的站排除。
 
-【P0站点表（必须）】
-Root候选表之外新增：
-🔴 P0 新站 / 上升站 / 值得分析
-
-字段：
+P0站点表必须输出：
 域名｜状态｜分类｜首次发现｜来源/证据｜为什么重要｜对应Root｜长尾示例｜DR｜流量｜Pricing｜可访问
+优先：X_NEW/NEW_LAUNCH/RISING_SITE/低DR已有流量/Exact或Partial Match/验证新Root的独立站。
+DR/流量无可靠来源写“未验证”，禁止猜。
 
-优先：X_NEW、NEW_LAUNCH、RISING_SITE、低DR已有流量、Exact/Partial Match、验证新Root的独立站。
-DR/流量无可靠数据写“未验证”，禁止猜。
+全部站点还必须按分类汇总，不只列Top 2–3：
+AI视频生成、AI视频编辑、AI图片/设计、AI音乐/语音、AI Agent/Coding、AI 3D/CAD、AI Ecommerce、AI SEO/GEO、AI Documents、Professional Workflow、其它。
+每个域名尽量带 DR + Root/一句重要性说明。
 
-【全部站点分类汇总（必须）】
-不只列Top 2–3，像站点库一样输出：
-AI视频生成（N）：domain DRxx · domain DR?
-AI视频编辑（N）：...
-AI图片/设计（N）：...
-AI音乐/语音（N）：...
-AI Agent/Coding（N）：...
-AI 3D/CAD（N）：...
-AI Ecommerce（N）：...
-AI SEO/GEO（N）：...
-AI Documents（N）：...
-Professional Workflow（N）：...
-其它（N）：...
-每个域名尽量带DR + Root/一句重要性说明。
+【C. Root 发现】
+重点新词类型：
+A 新品牌
+B 品牌+模型
+C 模型+功能
+D 产品+使用场景
+E Existing Entity×Existing Entity异常新组合
+F 职业工作流/X→Y
 
-【Root ↔ Site 双向发现】
+例：
+Strata Qwen；Claude MCP；ComfyUI+新模型；Ollama+新模型；photo to CAD；video to SOP；audio to MIDI；photos to claim packet；supplier PDF to compliant label。
+两个旧词过去30–90d几乎没组合使用，但近24–72h突然在多个来源出现，标 COMBINATION BREAKOUT。
+
+【AI Root 全行业覆盖】
+Image/Photo/Design：product photo/logo/avatar/headshot/infographic/diagram/floor plan/tattoo/comic/manga/webtoon + generator/editor/enhancer/remover/vectorizer/inpainting/outpainting/image-to-video/image-to-3D/image-to-CAD。
+Video：UGC/avatar/faceless/product/music/ad video + text-to-video/image-to-video/video-to-video/lip sync/dubbing/editor/motion control/character consistency/product consistency。
+Audio/Music/Voice：music/song/voice/audio/podcast + generator/clone/changer/translator/stem splitter/audio-to-MIDI/song-to-sheet-music/video-to-tabs。
+3D/CAD/Manufacturing：image/photo/sketch/PDF→3D/CAD/DXF/STEP/STL/G-code/floor plan/measurement，重点“现实输入→可制造文件”。
+Agent/Coding/MCP：agent/coding/browser/voice agent + builder/orchestration/memory/eval/security；MCP server/client/registry/validator/security；新模型×Ollama/LM Studio/ComfyUI/Cursor/Claude Code。
+Ecommerce：product photo/listing/catalog/UGC/virtual try-on/Amazon A+/Shopify/Etsy/TikTok Shop/product fidelity。
+SEO/GEO：keyword/SERP/content/AI visibility/LLM visibility/citation tracker/ChatGPT ranking/Perplexity SEO/GEO/AEO。
+Documents：PDF/OCR/Excel/CSV/invoice/receipt/BOL/AWB/SDS/BOM/contract/claim/inspection report + parser/extractor/checker/reconciliation。
+行业继续覆盖 Legal、Finance、HR、Education、Gaming、Construction、Real Estate、Insurance、Logistics、Customs、Manufacturing、Fashion、Jewelry、Packaging、Compliance、Chemical/SDS、Research、Cybersecurity、Health Admin/Dental。
+
+组合矩阵：
+AI Capability × Input × Output × Function × Industry × Profession × Platform × Model × Workflow × Search Intent。
+重点找 Object×Function、Model×Platform、Model×Use Case、Profession×Deliverable、X→Y、Existing Entity×Existing Entity。
+每轮至少探索20个新的X→Y，但没有真实信号只能记IDEA。
+
+【新模型扩词】
+任何新模型不允许只记模型名。继续检查：
+download/github/HF/API/pricing/benchmark/demo/free；
+local/Mac/Windows/Linux/Ollama/LM Studio/ComfyUI/WebUI/OpenRouter；
+image/video/coding/agent/OCR/3D/voice；
+product photo/manga/infographic/UGC/product video/lip sync/avatar/character consistency等真实任务。
+
+【真实信号门槛】
+至少一种真实信号才能进候选，重要候选尽量2个独立信号：
+X/Reddit重复讨论、Google新SERP、GitHub Repo、HF项目、新站/新域名、真实产品功能、职业工作流、用户问题、开发者下注、Pricing、真实使用案例。
+只有语义组合无信号=IDEA，不能进Top Opportunity。
+
+【Root↔Site双向】
 必须同时执行：
-新 Root → 找站
-新站 → 读 Title/H1/Meta/URL/导航/Feature/Use Cases/Pricing/Templates/Docs → 反推 Root/长尾。
+新Root→找站；
+新站→读Title/H1/Meta/URL/导航/Feature/Use Cases/Pricing/Templates/Docs→反推Root/长尾。
+多个独立小站7d内同时下注同一小Root=FOUNDER SIGNAL，并提高Demand/Final Score。
+低DR新站已有自然流量=强验证。
+只有新闻、没有产品/用户问题=降低机会分，但新闻仍保留在热点层。
 
-多个独立小站7d内同时下注同一小Root：标 FOUNDER SIGNAL，提高 Demand/Final Score。
-低DR新站已有自然流量：强验证。
-只有新闻、没有真实产品/重复用户问题：降分。
+【SERP/评分】
+重要Root检查Google SERP：Top10首页/内页、小站/新站、Exact/Partial Match、大品牌垄断、论坛/GitHub占比、是否已有专门工具、是否适合独立站/pSEO。
+优先：小站能进、内页多、大牌未完全覆盖、意图明确、工具化强。
+评分：Novelty、Demand、SERP、Commercial、Toolability、Independent Site、Final Opportunity Score/100。
+区分“很新但没人要”和“很新且需求正在形成”。
 
-【热门站反查】
-每轮抽查成熟热门AI站最近新增页面，重点找：新功能/模板/use case、新押注长尾、Model×Platform、Function×Industry、Input→Output；若需求已被大站验证但SERP仍有小站切口，也保留。
+【状态】
+NEW / RISING / BREAKOUT / COMBINATION BREAKOUT / FOUNDER SIGNAL / WATCH / IDEA。
+旧词只有趋势上涨、新站、新案例、新域名、SERP改变、官方发布、新功能、新长尾或BREAKOUT才重报。
 
-【长尾与需求验证】
+【长尾】
 通过验证的Root给5–15个有逻辑长尾：
 Root + free/online/local/open source/API
 Root + Mac/Windows/ComfyUI/Ollama/MCP
@@ -285,16 +184,30 @@ Root + alternatives/vs/pricing/review
 Root + profession/industry/use case
 model + capability/platform/workflow
 
-Top候选要回答：谁会搜、找什么、最佳页面类型、是否可能付费、能否免费工具获客+订阅/API/广告/联盟/Lead、能否pSEO、官方已有页面时独立站如何差异化。
+【最终输出顺序：强制】
+A. 🔥 大模型厂家/AI平台热点（不能被过滤）
+B. 🔴 P0 新站/上升站/X新提及站
+C. 新词/Root候选表
+D. Top Opportunities（可以只有0–3个，不凑数）
+E. 全部站点分类池
+F. Top 3 必抢（不足3个就明确不足）
+G. Top 5 Watchlist
+H. 统计：新产品、新模型、新Root、新组合词、COMBINATION_BREAKOUT、FOUNDER_SIGNAL、BREAKOUT、X_NEW、NEW_LAUNCH、RISING_SITE、有效站点数、值得建站数。
+
+如果没有真正达标的新词，写“本轮未发现达到建站标准的新词”，但热点表、P0站点、站点池、Watchlist仍必须正常输出。
 
 【执行顺序】
-新事件/新站雷达 → Root提取 → Site扩展 → 真实信号 → SERP → 案例站 → DR/流量 → 长尾 → 评分。
-不要先生成几百组合再找证据。高潜词追到：来源→Root→长尾→SERP→案例→页面类型→商业模式。无法验证写“未验证”。
+大模型热点扫描 → X/站点雷达 → Root提取 → Site扩展 → 真实信号 → SERP → 案例站 → DR/流量 → 长尾 → 评分。
+不要先生成几百组合再找证据。无法验证的数据明确写“未验证”。
 
-【持久化与学习】
-如GitHub有写权限，新增站点/Root写入：
+【持久化】
+如GitHub有写权限，新增站点/Root/运行结果写入：
 x-grok-ai-keyword/data/sites.csv
 x-grok-ai-keyword/data/roots.csv
 x-grok-ai-keyword/runs/YYYY-MM-DD-HH.md
-保存first_seen、last_seen、source、status，不覆盖历史。
-持续观察Top Opportunity的竞争者、流量、SERP难度、WATCH→RISING→BREAKOUT，也记录“没有需求”的失败样本，用反馈修正Final Opportunity Score。
+保存first_seen、last_seen、source、status，不覆盖历史。持续观察Top Opportunity的竞争者、流量、SERP和WATCH→RISING→BREAKOUT，也记录“最终没有需求”的失败样本，用反馈修正评分。
+
+【热点覆盖完整性检查】
+输出前逐项核对主要厂家是否被扫描。至少保证 OpenAI、Anthropic、Google/Gemini、Meta/Llama、xAI/Grok、Microsoft、NVIDIA、Amazon、Mistral、DeepSeek、Qwen/Alibaba、ByteDance/Seed、Kimi、GLM、MiniMax、Tencent/Hunyuan、Baidu/ERNIE、Kling 在“热点表”中有结果或明确 NO_MAJOR_UPDATE。不能因为没有建站词就完全不出现。
+每条热点优先给原始链接；若来源是转述，继续追官方/原始发布。对“持续发酵”的旧热点保留首次发布时间和本轮新增信号，避免把旧新闻误写成今天首发。
+热点热度可参考：官方发布、X提及扩散、HN/PH/HF/GitHub/Reddit、多媒体报道、Google Trends/SERP变化。没有可靠数据时不要虚构提及次数。
