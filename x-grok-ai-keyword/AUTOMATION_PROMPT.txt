@@ -105,6 +105,13 @@ DR/流量无可靠来源写“未验证”，禁止猜。
 AI视频生成、AI视频编辑、AI图片/设计、AI音乐/语音、AI Agent/Coding、AI 3D/CAD、AI Ecommerce、AI SEO/GEO、AI Documents、Professional Workflow、其它。
 每个域名尽量带DR + Root/一句重要性说明。
 
+
+
+【X Founder / Build in Public 站点采集：高优先级】
+本任务主要收集站点。除固定AI账号外，每轮必须搜索公开的 founder/maker/build-in-public 圈：
+#buildinpublic、#indiehackers、#indiedev、#solopreneur、#microsaas、#saas、#aitools、#aistartup，以及 "I built"、"I made"、"just launched"、"new AI tool"、"my SaaS"、"side project"、"shipping"、"waitlist"、"beta"、"Product Hunt"、"Show HN"。
+对类似 launch thread、产品合集、build-in-public 更新帖，提取正文/回复/Quote/bio/置顶帖中的所有产品名和实际Domain；一帖多站全部收，不只取第一名；短链展开。发现高产 founder、curator、roundup 账号、公开List/Community后加入 SOURCE_SEEDS，后续每轮检查其24h/72h/7d新链接。站点先进入 SITE_POOL，再做 Root/SERP 筛选；不要因为暂时不是Top Opportunity而丢站。
+
 【C. 新词/Root 发现】
 重点找：
 A 新品牌
