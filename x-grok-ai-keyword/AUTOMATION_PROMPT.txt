@@ -1,0 +1,273 @@
+执行「AI 新词 / 新搜索需求雷达」。
+
+第一步（必须）：
+使用已连接的 GitHub Connector 读取并遵循完整规则：
+https://github.com/run100/x-grok-cron/blob/main/x-grok-ai-keyword/AI-KEYWORD-RADAR.md
+
+该文件是本任务的唯一长期 Full Spec。每次执行先读取最新版，不要只依赖本提示词。如果 Full Spec 更新，以 GitHub 最新内容为准。
+
+如果暂时无法读取 GitHub，仍按下面核心规则执行，不要中止。
+
+【核心 KPI】
+不要把“发现 AI 新闻数量”当成功指标。真正目标是尽可能早发现“过去几乎不存在、现在开始形成真实搜索需求”的新 Root / 新组合词 / 新工作流 / 新站点机会。
+
+重点发现：
+1. 新 AI 产品、模型、品牌
+2. 新模型 + 已有产品/平台形成的新组合词
+3. 新功能、新玩法、新工作流
+4. 新职业 AI 工作流
+5. 突然被多人讨论的新 AI 概念
+6. 过去 30–90 天几乎不存在、最近 24–72h 开始出现的新词
+7. 可以做 Tool / Generator / Checker / Calculator / Directory / Database / Tutorial / Comparison / Template / API / pSEO 的词
+8. 新站点反向暴露出来的新 Root
+
+【时间】
+优先过去 24h，同时回看 72h、7d、30d，必要时 90d，判断是否真正从 0 开始起量。
+
+【信息源】
+优先 X/Twitter：
+@_akhaliq、Hugging Face、OpenAI、Google/DeepMind、Anthropic、Meta AI、xAI、DeepSeek、Qwen/Alibaba、Microsoft AI、NVIDIA AI、Stability AI、Black Forest Labs、Runway、Midjourney、ElevenLabs、Replicate、fal.ai、Cursor、Ollama、LM Studio、ComfyUI 等。
+
+同时检查：
+Hugging Face Trending、GitHub Trending/新 Repo、Product Hunt、Hacker News、Reddit（LocalLLaMA/StableDiffusion/MachineLearning/SaaS/SideProject/SEO 等）、官方 Blog/Release Notes/Model Cards、AI 导航新收录、新上线小站、新域名、教程。
+
+不要只盯大厂。个人开发者、小团队和刚上线的小站优先。
+
+【最重要的新词类型】
+A 新品牌
+B 品牌 + 模型
+C 模型 + 功能
+D 产品 + 使用场景
+E Existing Entity × Existing Entity 的异常新组合
+F 职业工作流 / X→Y
+
+例如：
+Strata Qwen
+Claude MCP
+ComfyUI + 新模型
+Ollama + 新模型
+photo to CAD
+video to SOP
+audio to MIDI
+photos to claim packet
+supplier PDF to compliant label
+
+如果两个旧词过去 30–90d 几乎没组合使用，但最近 24–72h 突然在多个来源出现，标记 COMBINATION BREAKOUT。
+
+【AI Root 必须全行业覆盖】
+不要只追 AI 新闻。每轮主动在以下 Root Tree 中寻找新变化：
+
+AI Image/Photo/Design：
+image/photo/product photo/design/logo/icon/avatar/headshot/infographic/diagram/floor plan/tattoo/comic/manga/webtoon + generator/editor/enhancer/remover/vectorizer/inpainting/outpainting/image-to-video/image-to-3D/image-to-CAD 等。
+
+AI Video：
+video/UGC/avatar/faceless/product video/music video + text-to-video/image-to-video/video-to-video/lip sync/dubbing/translator/editor/motion control/character consistency/product consistency 等。新视频模型出现后自动扩 [model] + image to video / lip sync / UGC / product video / avatar / anime / API / prompt。
+
+AI Audio/Music/Voice：
+music/song/voice/audio/podcast + generator/clone/changer/translator/stem splitter/audio-to-MIDI/song-to-sheet-music/video-to-tabs 等。
+
+AI 3D/CAD/Manufacturing：
+image/photo/sketch/PDF → 3D/CAD/DXF/STEP/STL/G-code/floor plan/measurement，重点关注“现实输入 → 可生产文件”。
+
+AI Agent/Coding/MCP：
+agent/coding agent/browser agent/voice agent + builder/orchestration/memory/eval/security/monitor；MCP server/client/registry/validator/security/scanner；新模型 × Ollama/LM Studio/ComfyUI/Cursor/Claude Code 等。
+
+AI Ecommerce：
+product photo/listing/catalog/UGC/virtual try-on/Amazon A+/Shopify/Etsy/TikTok Shop/product fidelity。
+
+AI SEO/GEO：
+keyword/SERP/content/AI visibility/LLM visibility/citation tracker/ChatGPT ranking/Perplexity SEO/GEO/AEO。
+
+AI Documents：
+PDF/OCR/Excel/CSV/invoice/receipt/BOL/AWB/SDS/BOM/contract/claim/inspection report + parser/extractor/checker/reconciliation/report。
+
+职业/行业：
+Legal、Finance、HR、Education、Gaming、Construction、Real Estate、Insurance、Logistics、Customs、Manufacturing、Fashion、Jewelry、Packaging、Compliance、Chemical/SDS、Research、Cybersecurity、Health Admin/Dental 等。
+
+完整 Root 母库和扩词规则以 GitHub Full Spec 为准。
+
+【通用组合矩阵】
+每轮都从这些维度碰撞，但禁止机械生成垃圾词：
+
+AI Capability
+× Input Object
+× Output
+× Function
+× Industry
+× Profession
+× Platform
+× Model
+× Workflow
+× Search Intent
+
+重点找：
+Object × Function
+Model × Platform
+Model × Use Case
+Profession × Deliverable
+X → Y
+Existing Entity × Existing Entity
+
+每轮至少主动探索 20 个新的 X→Y 工作流，但只有出现真实信号才能成为候选。
+
+【新模型扩词】
+任何新模型不允许只记录模型名。
+继续检查：
+download / github / hugging face / API / pricing / benchmark / demo / free
+local / Mac / Windows / Linux / Ollama / LM Studio / ComfyUI / WebUI
+image / video / coding / agent / OCR / 3D / voice
+以及真实任务：product photo / manga / infographic / UGC / product video / lip sync / avatar / character consistency 等。
+
+【真实信号门槛】
+禁止“新模型 × 1000 Root”后全部当机会。
+
+至少出现一种真实信号才能进入候选：
+X/Reddit 真实讨论
+Google 新 SERP
+GitHub Repo
+Hugging Face 项目
+新网站/新域名
+真实产品功能
+真实职业工作流
+用户问题
+开发者下注
+付费/Pricing
+真实使用案例
+
+只有语义上成立但无信号：标记 IDEA，不能进 Top Opportunity。
+
+重要候选尽量要 2 个独立信号。
+
+【新站反推】
+必须同时做：
+新词 → 找网站
+新网站 → 反推 Root
+
+发现新站后检查 Title/H1/Meta/URL/导航/功能页/Use Cases/Pricing/Templates/Docs。
+多个新站同时下注同一个小 Root：标记 FOUNDER SIGNAL。
+
+【SERP】
+重要 Root 必须检查 Google SERP：
+Top10 是否首页/内页、小站、新站、Exact/Partial Match、大品牌垄断程度、论坛/GitHub 占比、是否已有专门工具、是否适合独立站/pSEO。
+
+优先：小站能进、内页多、大牌未完全覆盖、搜索意图明确、工具化强。
+
+【状态】
+NEW = 首次发现
+RISING = 已发现但明显增长
+BREAKOUT = 明显爆发
+COMBINATION BREAKOUT = 两个旧词的新组合爆发
+FOUNDER SIGNAL = 多个开发者/新站同时下注
+WATCH = 证据不足待追踪
+IDEA = 无真实需求证据
+
+【去重】
+不要重复发旧词。只有趋势上涨、新站、新案例、新域名、SERP 改变、官方发布、新功能、新长尾或 BREAKOUT 才重新报告。
+
+【评分】
+尽量给：
+Novelty Score
+Demand Score
+SERP Score
+Commercial Score
+Toolability Score
+Independent Site Score
+Final Opportunity Score /100
+
+区分“很新但没人要”和“很新且正在形成需求”。
+
+【输出】
+先给候选表格：
+新词/Root｜状态｜分类｜是什么｜首次发现｜证据｜24h/72h/7d信号｜30/90d历史｜Google/SERP｜案例站｜DR/流量（能验证则给）｜搜索意图｜建站类型｜推荐长尾｜Final Score
+
+然后给 Top 10 Opportunities，每个写：
+为什么突然出现
+需求来源
+过去是否几乎没人搜
+24–72h 变化
+当前 SERP
+案例站
+可做什么站
+建议 Root/长尾
+商业化
+风险
+评分
+
+最后：
+Top 3 必抢
+Top 5 Watchlist
+
+以及统计：
+新产品、新模型、新 Root、新组合词、COMBINATION BREAKOUT、FOUNDER SIGNAL、BREAKOUT、值得建站数量。
+
+如果没有真正达标的新词，不要凑数。
+明确写：
+“本轮未发现达到建站标准的新词。”
+但仍输出 Watchlist。
+
+最终目标：
+持续建立并更新动态的 AI 新词 / Root / 长尾 / 案例站 / SERP / 商业机会数据库，优先捕获类似 Strata Qwen 这种“刚形成、需求开始出现、SERP 尚空、独立站可抢”的 0→1 搜索机会。
+
+
+【重点 Root 深挖补充】
+每轮不能只搜一级类目，成熟大词只作为 Seed，必须继续拆到第二、第三、第四层。
+
+Image/Design：
+product image、food photo、real estate photo、fashion photo、jewelry photo、headshot、avatar、tattoo、comic、manga、webtoon、diagram、infographic、floor plan、blueprint、mockup、sticker、logo、icon、texture、pattern、sprite、game asset；继续组合 editor/generator/enhancer/remover/relight/recolor/vectorizer/3D/CAD/SVG/STL/embroidery。
+
+Video：
+UGC、faceless、avatar、spokesperson、product/ad/music/podcast/shorts/explainer/cinematic/anime video；继续组合 image-to-video/text-to-video/video-to-video/lip sync/dubbing/translator/camera control/motion control/character consistency/product fidelity。
+
+Audio/Music：
+voice clone/changer、TTS、speech-to-text、audio translator、noise/vocal remover、stem splitter、mastering、song extender、audio-to-MIDI、drums-to-MIDI、guitar-to-tabs、song-to-sheet-music。
+
+3D/CAD：
+photo/image/sketch/PDF/scan → 3D/CAD/DXF/STEP/STL/OBJ/GLB/USDZ/G-code；floor plan → 3D/estimate/material list；image → embroidery/sewing pattern/manufacturing file。优先“现实输入 → 可交付/可制造文件”。
+
+Professional Workflow：
+Construction：takeoff、estimate、roof measurement、jobsite photo→progress report。
+Insurance：photo→claim、photos→claim packet、photo→estimate、document reconciliation。
+Freight/Customs：BOL/AWB/packing list、freight audit、HS/HTS code、BOL+photos→claim。
+Packaging/Compliance：nutrition label、INCI、supplement label、artwork checker、SDS/GHS、dangerous goods。
+Fashion/Jewelry：tech pack、size chart、sewing pattern、embroidery、sketch/photo→jewelry CAD。
+Documents：invoice/receipt/contract/BOM/SDS/claim/inspection report 的 parser/extractor/checker/reconciler。
+
+【异常信号优先】
+特别寻找：
+1. 新模型发布 1–3 天内某平台开始支持。
+2. 两个成熟 Entity 首次形成固定组合。
+3. 多个独立开发者 7 天内做出同类小工具。
+4. Reddit/X 重复出现 how to / support / vs / local / API 等问题。
+5. Google 已有结果，但尚无权威专题页或专门工具。
+
+【需求验证】
+Top 候选尽量回答：
+谁会搜？找工具、下载、教程、API、价格还是替代品？
+最佳页面类型是什么？
+用户是否可能付费？
+能否用免费工具获客，再通过订阅/API/广告/联盟/Lead 商业化？
+能否做模板页、use-case 页、行业页形成 pSEO？
+官方若已有页面，独立站的差异化入口是什么？
+
+【长尾规则】
+通过验证的 Root 给 5–15 个有逻辑的长尾，优先：
+[Root] + free/online/local/open source/API
+[Root] + Mac/Windows/ComfyUI/Ollama/MCP
+[Root] + tutorial/setup/prompts/workflow
+[Root] + alternative/vs/pricing/review
+[Root] + profession/industry/use case
+[model] + capability/platform/workflow
+
+【案例站强信号】
+优先标记：
+新上线；DR 低但已有流量；单一功能切入；公开 Pricing/用户量/处理量；多个同类新站同时出现；Title/H1 明确押注同一 Root。
+
+【执行纪律】
+每轮顺序：
+新事件雷达 → Root 扩展 → 真实信号 → SERP → 案例站 → 评分。
+不要先生成几百词再找证据。
+高潜词继续追到：来源 → Root → 长尾 → SERP → 案例 → DR/流量 → 页面类型 → 商业模式。
+无法验证的数据明确写“未验证”，不要猜 DR、流量、发布时间或搜索量。
+
+【持续学习】
+保存首次发现、首次证据、状态变化和最新证据。对 Top Opportunity 后续观察竞争者、流量、SERP 难度和 WATCH→RISING→BREAKOUT 变化，也记录最终被证明“没有需求”的词，用成功/失败样本持续修正 Final Opportunity Score。
