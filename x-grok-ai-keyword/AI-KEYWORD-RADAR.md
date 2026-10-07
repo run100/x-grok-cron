@@ -1242,3 +1242,100 @@ G. Top 5 Watchlist
 H. 本轮统计
 
 热点层与机会层必须分开，避免“为了不凑 Top Opportunity”把真正重要的 AI 大事件一起删掉。
+
+
+---
+
+## 48. X Founder / Build in Public 站点采集（高优先级）
+
+本任务的主要产物之一是“站点库”。除了模型热点，必须主动从 X 的 founder / maker / build-in-public 圈子持续采集真实网站。
+
+重点不是只搜索某几个账号，而是搜索整类公开帖子、公开 Lists、公开 Communities、话题和关键词组合。
+
+### 48.1 重点社区 / 话题
+
+长期搜索：
+- #buildinpublic
+- #indiehackers
+- #indiedev
+- #solopreneur
+- #microsaas
+- #saas
+- #aitools
+- #aistartup
+- #shipfast / shipping / shipped
+- maker / makers
+- indie hacker / indie hackers
+- side project
+- weekend project
+- launch / launched / launching
+- just launched
+- I built / we built
+- I made / we made
+- built this
+- shipping today
+- new AI tool
+- new AI app
+- my SaaS
+- my startup
+- beta / waitlist / early access
+- Product Hunt launch
+- Show HN
+
+同时搜索相关 X Lists / Communities / 公开群组；发现新的高产社区、账号或列表后加入后续轮次的种子池。
+
+### 48.2 站点优先提取
+
+对类似“我做了一个工具 / 本周新站 / 产品合集 / launch thread / build in public 更新”的帖子：
+
+1. 提取帖子正文、回复、Quote、图片说明里出现的所有产品名和 URL。
+2. 优先还原最终 Domain，短链必须展开。
+3. 一条帖子包含多个站点时全部记录，不只取第一名。
+4. 顺着作者主页、置顶帖、bio link、回复继续找产品站。
+5. 对“合集账号 / launch roundup / founder thread”继续追其最近 7–30 天帖子，作为站点发现源。
+6. 不要求这些站先有搜索量；站点先进入 SITE_POOL，再由后续 Root/SERP 流程筛选。
+
+### 48.3 搜索模板
+
+每轮轮换搜索：
+"build in public" AI
+"#buildinpublic" AI tool
+"#buildinpublic" launched
+"just launched" AI tool
+"I built" AI tool
+"I made" AI app
+"new AI tool" founder
+"shipping" AI SaaS
+"my SaaS" AI
+"micro saas" AI
+"side project" AI
+"indie hacker" AI
+"Product Hunt" AI launch
+"Show HN" AI
+"waitlist" AI tool
+"beta" AI app
+
+同时做非 AI 版本，用于发现“实际使用 AI 但文案未写 AI”的产品。
+
+### 48.4 社区种子扩展
+
+发现一个高价值 founder / curator / roundup 账号后：
+- 检查其关注/回复/Quote 中反复出现的 maker
+- 找其 Lists / Communities（公开可访问时）
+- 找同一话题下高互动账号
+- 将这些账号加入 SOURCE_SEEDS
+- 后续每轮抽查其近 24h / 72h / 7d 新链接
+
+目标是形成“账号/社区 → 新站点 → Root → Similar Sites”的稳定发现链，而不是每轮从零搜。
+
+### 48.5 站点池优先级
+
+站点池优先收集：
+1. X_NEW：X 上近72h新出现的产品站
+2. FOUNDER_SITE：独立开发者/小团队站
+3. NEW_LAUNCH：刚发布/刚公测
+4. RISING_SITE：近期多次被不同账号提及
+5. HOT_SITE：成熟站有新功能/新页面
+6. SIMILAR_SITE：由竞品/alternatives扩展
+
+站点是否值得建站研究，在收集后再判断；不要因为“暂时不是 Top Opportunity”把站点丢掉。
