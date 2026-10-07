@@ -895,3 +895,200 @@ AI Capability
 输出：
 “本轮未发现达到建站标准的新词。”
 但仍输出 Watchlist 并继续下一轮追踪。
+
+
+---
+
+## 43. AI 站点发现轨（每轮必须执行）
+
+本任务不能只输出 Root / 新闻。每轮必须同时运行一条独立的「AI Site Radar」，主动发现“新站 + 热门站 + 上升站 + 相似站”。
+
+### 43.1 站点来源
+
+优先抓取过去 24h，同时回看 72h / 7d：
+
+1. X / Twitter 新提及或新分享的 AI 网站
+   - 重点账号发布正文、回复、引用帖中的域名
+   - AI 创业者 / 独立开发者 / 模型作者 / AI 工具测评账号提到的工具
+   - 不只看品牌名，必须提取实际 Domain / URL
+
+2. Product Hunt
+   - 当日 / 近 7 日 AI 新产品
+   - 榜单、评论、maker 主页中出现的相关工具
+
+3. GitHub
+   - Trending / 新 Repo / Stars 快速上涨项目
+   - README、Homepage、Demo、Docs 中的产品域名
+
+4. Hugging Face
+   - Trending Models / Spaces / Collections
+   - Space Demo、项目官网、模型配套工具
+
+5. Reddit / Hacker News
+   - 被不同用户重复提到的工具
+   - “I built / Show HN / alternative / what tool / how do I” 帖中的域名
+
+6. Google / Bing SERP
+   - Top Root 的当前结果
+   - alternatives / competitors / similar / best / free / online / use case 等 SERP
+
+7. AI 导航与目录
+   - 新收录站
+   - 分类页出现频率高的站
+   - 新上线但尚未有强 SEO 的小工具
+
+8. 热门成熟 AI 站点
+   - 不要求新域名
+   - 作为 REFERENCE / HOT_SITE 种子，检查最近新增 Feature / Use Case / Template / Landing Page
+   - 用于反推正在变热的新 Root / 长尾
+   - 热门站本身不能因为流量高自动进入 Top Opportunity
+
+### 43.2 站点状态
+
+每个 Domain 标记一种或多种：
+
+X_NEW = 最近 24–72h 首次从 X 发现
+NEW_LAUNCH = 新上线 / Product Hunt / Show HN / 新 Repo
+HOT_SITE = 成熟热门站，近期有新功能/新页面/高讨论
+RISING_SITE = 讨论、排名、流量或引用明显增长
+SIMILAR_SITE = 由某个 Root / 竞品 / alternatives 扩展发现
+FOUNDER_SITE = 独立开发者新站
+REFERENCE = 用于研究 Root，不代表建站机会
+DEAD = 无法访问 / 停放 / 明显无产品，应排除
+
+### 43.3 Similar-Site 扩展
+
+发现一个高价值站点后，不要停止。
+
+对每个 P0 / Top Root 尽量继续找 3–10 个：
+- competitors
+- alternatives
+- similar tools
+- 同类 Product Hunt 产品
+- 同类 AI Directory 分类页站点
+- SERP 同页小站
+- Reddit 用户推荐
+- “X alternatives / X vs / best X” 页面中的域名
+
+目标不是复制成熟大站，而是用站点簇判断：
+- 是否已形成独立品类
+- 是否多个 founder 同时下注
+- 是否有低 DR 小站获得流量
+- 哪些二级/三级 Root 尚未被占满
+
+### 43.4 热门站点反查
+
+每轮应抽查一批热门 AI 产品最近新增的：
+Feature、Template、Use Case、Workflow、Integrations、API、Model Support、Alternatives 页面。
+
+重点不是报告“Canva/Runway/ElevenLabs 很热门”，而是发现：
+- 它们最近新增了什么页面
+- 新页面押注了什么长尾
+- 哪些长尾已经被大站验证，但 SERP 仍有小站机会
+- 是否出现新的「模型 × 平台」「功能 × 行业」「输入 → 输出」组合
+
+### 43.5 数量要求
+
+每轮目标：
+- 30–100 个“有效站点”进入站点池
+- 其中优先至少 10 个来自近 72h 的 X / PH / GitHub / HF / Reddit / HN 新信号
+- 每个 Top Root 尽量找 3–10 个相关站
+- 如果真实有效站点不足，不允许凑数
+
+“有效站点”必须至少满足：
+- 能正常访问或有明确产品证据
+- 有清晰定位 / 功能 / Root
+- 不是停放域名、纯采集页、404、明显垃圾站
+
+### 43.6 Host 去重
+
+按 host 去重：
+- www / 非 www 归一
+- http / https 归一
+- 同域不同 URL 只算一个站，但保留关键页面
+- 与历史 sites 数据去重
+- 已发现旧站如果出现新功能 / 新 Root / 明显增长，可以重新报告，并标 RISING_SITE / HOT_SITE
+
+---
+
+## 44. 站点输出格式
+
+除了“候选 Root 表”和“Top Opportunities”，每轮必须额外输出两层站点结果。
+
+### 44.1 🔴 P0 新站 / 上升站 / 值得重点分析
+
+表格：
+
+| 域名 | 状态 | 分类 | 首次发现 | 来源 | 为什么重要 | 对应 Root | 长尾示例 | DR | 流量 | Pricing | 可访问 |
+|---|---|---|---|---|---|---|---|---:|---:|---|---|
+
+优先放：
+- X_NEW
+- NEW_LAUNCH
+- RISING_SITE
+- 低 DR 但已经有自然流量
+- Exact / Partial Match
+- 直接验证某个新 Root 的站
+
+DR / Traffic 如果无可靠来源必须写“未验证”，严禁猜测。
+
+### 44.2 全部站点按分类汇总
+
+格式类似：
+
+AI 视频生成（N）：domainA DRxx · domainB DRxx · domainC DR?
+AI 视频编辑（N）：...
+AI 图片/设计（N）：...
+AI 音乐/语音（N）：...
+AI Agent/Coding（N）：...
+AI 3D/CAD（N）：...
+AI Ecommerce（N）：...
+AI SEO/GEO（N）：...
+AI Documents（N）：...
+Professional Workflow（N）：...
+其它（N）：...
+
+每个域名尽量带：
+Domain / DR / 对应 Root 或一句重要性说明。
+
+此部分用于形成“站点库”，不能只列 Top 2–3 个机会。
+
+---
+
+## 45. Root 与站点必须双向发现
+
+任务每轮同时执行两条链：
+
+A. 新词 / Root → 找站点
+B. 新站点 → 反推 Root / 长尾
+
+如果某个 Root 只有新闻，没有真实产品站点，降低分数。
+
+如果多个独立小站同时围绕一个小 Root 上线，提升：
+- Demand Score
+- FOUNDER SIGNAL
+- Final Opportunity Score
+
+如果低 DR 新站已获取自然流量，视为强验证信号。
+
+---
+
+## 46. 站点持久化
+
+如果当前任务具有 GitHub 写权限，新增站点应持久化，不要只存在本轮聊天中。
+
+推荐目录：
+
+x-grok-ai-keyword/data/sites.csv
+x-grok-ai-keyword/data/roots.csv
+x-grok-ai-keyword/runs/YYYY-MM-DD-HH.md
+
+sites.csv 建议字段：
+domain, url, category, status, root, keywords, first_seen, last_seen, source, source_url, dr, traffic, pricing, accessible, why_important
+
+原则：
+- 永不因为新一轮覆盖旧历史
+- host 去重
+- 更新 last_seen / status / 新证据
+- 保存首次发现时间
+- 无法验证的数据留空或写 unverified
