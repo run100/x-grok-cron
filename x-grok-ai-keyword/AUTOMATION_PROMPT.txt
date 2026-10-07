@@ -78,7 +78,7 @@ Model×profession/industry
 Existing Entity×Existing Entity
 只有通过真实需求验证的才进入 Top Opportunity。
 
-【B. 🔴 AI Site Radar：每轮强制】
+【B. 🔴 X New Site Radar：每轮强制；不限AI，AI优先】
 每轮主动找：
 X_NEW、NEW_LAUNCH、HOT_SITE、RISING_SITE、SIMILAR_SITE、FOUNDER_SITE、REFERENCE。
 
@@ -90,20 +90,21 @@ X_NEW、NEW_LAUNCH、HOT_SITE、RISING_SITE、SIMILAR_SITE、FOUNDER_SITE、REFE
 5. Reddit/HN：I built、Show HN、alternative、what tool、how to里的域名。
 6. Google SERP：Top Root 的 competitors/alternatives/similar/best/free/online/use-case。
 7. AI导航/目录：新收录和分类页高频小站。
-8. 热门成熟AI站：作为 HOT_SITE/REFERENCE，反查最近新增 Feature/Template/Use Case/Workflow/Integration/Model Support 页面，从新页面挖Root。热门本身不等于机会。
+8. 热门站只作 REFERENCE，反查新 Feature/Use Case/Template/Model Support，不因知名直接进P0。
 
-每轮目标30–100个有效域名；不足不凑数。优先至少10个来自近72h X/PH/GitHub/HF/Reddit/HN。
-每个Top Root尽量找3–10个相关站。高价值站继续找 competitors/alternatives/similar tools/同类PH/SERP同页小站/Reddit推荐。
-按host去重；www和协议归一。404、停放、无产品、垃圾采集站排除。
+【P0只收产品主域名】
+P0/SITE_POOL 只收独立产品主域名/Web App/Tool/SaaS/Generator/Game/Viral Utility。blog.cloudflare.com、docs/support/blog 子域、Product Hunt 页面、GitHub Repo、X、Reddit、HN、Medium/Substack、新闻媒体、导航站只能做 EVIDENCE_SOURCE，禁止当“发现站点”。若来源页指向外部产品，追到最终产品域名。
+
+Site Radar 不限AI。重点发现 X 上刚出现或突然传播的独立站，如 poster maker、quiz、calculator、generator、collection/share tool、micro utility。此前少见域名若24–72h被多个独立X账号分享，或大量用户分享生成结果，标 X_BREAKOUT_SITE，优先进P0。
+
+每轮目标30–100个有效产品域名；不足不凑数。优先至少10个来自近72h X/PH/GitHub/HF/Reddit/HN。每个Top Root尽量找3–10个相关产品站。按host去重并解析短链/重定向到最终主域；404、停放、无产品、垃圾采集站排除。
 
 P0站点表必须输出：
-域名｜状态｜分类｜首次发现｜来源/证据｜为什么重要｜对应Root｜长尾示例｜DR｜流量｜Pricing｜可访问
+产品主域名｜状态｜分类｜首次发现｜X/来源证据｜为什么重要｜对应Root｜长尾示例｜DR｜流量｜Pricing｜可访问
 优先：X_NEW/NEW_LAUNCH/RISING_SITE/低DR已有流量/Exact或Partial Match/验证新Root的独立站。
 DR/流量无可靠来源写“未验证”，禁止猜。
 
-全部站点还要按分类汇总，不只列Top 2–3：
-AI视频生成、AI视频编辑、AI图片/设计、AI音乐/语音、AI Agent/Coding、AI 3D/CAD、AI Ecommerce、AI SEO/GEO、AI Documents、Professional Workflow、其它。
-每个域名尽量带DR + Root/一句重要性说明。
+全部站点按分类汇总，不只列Top 2–3；每个域名尽量带DR+Root/一句说明。
 
 
 
@@ -169,7 +170,7 @@ image/video/coding/agent/OCR/3D/voice；
 product photo/manga/infographic/UGC/product video/lip sync/avatar/character consistency 等真实任务。
 
 【真实需求门槛】
-至少一种真实信号才能进入候选，重要候选尽量2个独立信号：
+至少一种真实信号才能进入候选，重要候选尽量2个信号：
 X/Reddit重复讨论、Google新SERP、GitHub Repo、HF项目、新站/新域名、真实产品功能、职业工作流、用户问题、开发者下注、Pricing、真实使用案例。
 只有语义组合无信号=IDEA，不能进Top Opportunity。
 
